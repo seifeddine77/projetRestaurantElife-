@@ -75,7 +75,7 @@ public class Restaurant {
 
     @Override
     public String toString() {
-        return "Restaurant{" + "id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", phone=" + phone + ", email=" + email + ", adresse=" + adresse + '}';
+        return "Restaurant{" + "id=" + id + ", nom=" + nom +  phone=" + phone + ", email=" + email + ", adresse=" + adresse + '}';
     }
    
    
