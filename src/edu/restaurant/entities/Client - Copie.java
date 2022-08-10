@@ -16,6 +16,7 @@ public class Client {
    private String phone ;
    private String email;
    private String adresse ; 
+   private String vlille; 
 
     public Client() {
     }
