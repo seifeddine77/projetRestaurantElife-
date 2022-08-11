@@ -34,5 +34,34 @@ public class ClientCRUD {
         }
 
     }
+      public List<Client> listerClient(){
+    
+    ArrayList <Personne> myList = new ArrayList();
+    
+    String requete = "SELECT * FROM Client";
+        try {
+            Statement st = new MyConnection().getCnx().createStatement();
+              ResultSet rs = st.executeQuery(requete);
+              
+              while(rs.next()){
+              
+              
+              Client p = new Client ();
+              p.setId(rs.getInt(1));
+              p.setNom(rs.getString("nom"));
+              p.setPrenom(rs.getString("prenom"));
+              myList.add(p);
+              
+              }
+        } catch (SQLException ex) {
+            System.err.println(ex.getMessage());
+            
+            
+          
+           
+        }
+    return myList;
+    
+    }
 
 }
