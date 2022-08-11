@@ -22,6 +22,7 @@ public class ClientCRUD {
         try {
             String requete = "INSERT INTO client (nom,prenom,phone,email,adresse) VALUES(?,?,?,?,?) ";
             PreparedStatement pst = new MyConnection().getCnx().prepareStatement(requete);
+            
             pst.setString(1, c.getNom());
             pst.setString(2, c.getPrenom());
             pst.setString(3, c.getPhone());
